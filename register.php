@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "install.php";
+    include "dbCommunication.php";
 
     if(isset($_POST['submit'])){
         if(!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['email'])){

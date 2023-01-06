@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include "install.php";
+    include "dbCommunication.php";
 
     if(isset($_SESSION['id'])){
         header("location: index.php");;
