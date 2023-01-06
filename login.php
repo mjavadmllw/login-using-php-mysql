@@ -1,10 +1,10 @@
 <?php 
     session_start();
-    include "dbCommunication.php";
-
-    if(isset($_SESSION['id'])){
-        header("location: index.php");;
-    };
+    if (!isset($_SESSION['id'])) {
+        header("location: login.php");
+    } elseif ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        header("location: index.php");
+    }
 
     if (isset($_POST['submit'])) {
         $db_user= authenticate($_POST['username'], $_POST['password']);
