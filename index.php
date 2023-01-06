@@ -5,4 +5,4 @@ if (!isset($_SESSION['id'])) {
     header("location: login.php");
 }
 
-include __DIR__ . '/views/dashboradHtml.php';
+include __DIR__ . '/views/dashborad.view.php';

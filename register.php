@@ -17,4 +17,4 @@
 
 
 
-    include __DIR__ . '/views/registerHtml.php';
+    include __DIR__ . '/views/register.view.php';

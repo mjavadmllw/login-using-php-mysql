@@ -17,4 +17,4 @@
     }
 
 
-    include __DIR__ . '/views/loginHtml.php';
+    include __DIR__ . '/views/login.view.php';
