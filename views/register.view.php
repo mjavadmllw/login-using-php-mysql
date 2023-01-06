@@ -14,8 +14,8 @@
                 <?php if (!isset($_SESSION['id'])): ?>
                     <div class="form-container">
                         <form method="post" action="#">
-                            <input type="email" name="email" placeholder="Email">
-                            <input type="text" name="username" placeholder="Username">
+                            <input type="email" name="email" placeholder="Email" value="<?php if (isset($_POST['email'])){echo $_POST['email'];} ?>">
+                            <input type="text" name="username" placeholder="Username" value="<?php if (isset($_POST['username'])){echo $_POST['username'];} ?>">
                             <input type="password" name="password" placeholder="Password">
                             <input type="submit" name="submit" class="btn-login" value="Register">
                         </form>
