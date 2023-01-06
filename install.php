@@ -5,7 +5,7 @@
         $password=htmlspecialchars($password);
         $email=htmlspecialchars($email);
         try {
-            include "dbconnect.php";
+            include "confiq.php";
             $mysql=new mysqli($host,$dbusername,$dbpassword,$dbname);
             if($mysql->connect_error){
                 throw new Exception("didn't connect to database...!!!");
@@ -30,7 +30,7 @@
     function duplicateChecker($newEmail){
         $newEmail=htmlspecialchars($newEmail);
         try {
-            include "dbconnect.php";
+            include "confiq.php";
             $mysql=new mysqli($host,$dbusername,$dbpassword,$dbname);
             if($mysql->connect_error){
                 throw new Exception("didn't connect to database...!!!");
@@ -55,7 +55,7 @@
         $username=htmlspecialchars($username);
         $password=htmlspecialchars($password);
         try {
-            include "dbconnect.php";
+            include "confiq.php";
             $mysql=new mysqli($host,$dbusername,$dbpassword,$dbname);
             if($mysql->connect_error){
                 throw new Exception("didn't connect to database...!!!");
