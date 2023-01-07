@@ -1,8 +1,7 @@
 <?php
-session_start();
-if (!isset($_SESSION['id'])) {
-    header("location: login.php");
-} elseif ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+include __DIR__ . "/component/loggedout.php";
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header("location: index.php");
 }
 
