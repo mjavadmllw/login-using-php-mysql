@@ -3,6 +3,7 @@
     if (isset($_SESSION['id'])) {
         header("location: index.php");
     }
+    include "dbCommunication.php";
 
     if (isset($_POST['submit'])) {
         $db_user= authenticate($_POST['username'], $_POST['password']);
