@@ -17,7 +17,7 @@
                             <input type="email" name="email" placeholder="Email" value="<?php if (isset($_POST['email'])){echo $_POST['email'];} ?>">
                             <input type="text" name="username" placeholder="Username" value="<?php if (isset($_POST['username'])){echo $_POST['username'];} ?>">
                             <input type="password" name="password" placeholder="Password">
-                            <input type="submit" name="submit" class="btn-login" value="Register">
+                            <input type="submit" name="submit" class="btn-login" value="<?php if (file_exists("install.php")){echo 'Add';}else{echo 'Register';} ?>">
                         </form>
                         <?php if (isset($error)): ?>
                             <p style="color: red;"> <?php echo $error ?></p>
