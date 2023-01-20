@@ -12,9 +12,9 @@
             $conn->exec($sql);
             $sql = "CREATE TABLE IF NOT EXISTS users (
                         ID int(10) AUTO_INCREMENT PRIMARY KEY,
-                        username varchar(30) NOT NULL,
+                        username varchar(16) NOT NULL,
                         password varchar(50) NOT NULL,
-                        email varchar(40) NOT NULL)";
+                        email varchar(50) NOT NULL)";
             $conn->exec($sql);
             registration($_POST['username'],$_POST['password'],$_POST['email']);
             echo "<h3 style='text-align: center;padding-top:50px;'>DB:$dbname & TABLE:users => created successfully</h3>";
