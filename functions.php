@@ -8,7 +8,7 @@
 
         try {
             include "confiq.php";
-            $conn = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
+            $conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_username, $db_password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
             $conn=$conn->prepare("INSERT INTO users (username, password,email) VALUES (?,?,?)");
@@ -28,7 +28,7 @@
         $newEmail=htmlspecialchars($newEmail);
         try {
             include "confiq.php";
-            $conn = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
+            $conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_username, $db_password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
             $stmt->execute([$newEmail]);
@@ -53,7 +53,7 @@
         $password=md5($password);
         try {
             include "confiq.php";
-            $conn = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
+            $conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_username, $db_password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $stmt = $conn->prepare("SELECT id,username,password,email FROM users WHERE username = ? ");
             $stmt->execute([$username]);
