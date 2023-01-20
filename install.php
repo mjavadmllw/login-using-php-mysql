@@ -1,6 +1,6 @@
 <?php
     include __DIR__ . '/confiq.php';
-    include __DIR__ . '/dbCommunication.php';
+    include __DIR__ . '/functions.php';
 
     if(isset($_POST['submit'])){
         try {

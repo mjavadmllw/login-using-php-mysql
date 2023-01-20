@@ -1,6 +1,6 @@
 <?php 
     include __DIR__ . "/component/loggedin.php";
-    include "dbCommunication.php";
+    include "functions.php";
 
     if (isset($_POST['submit'])) {
         $db_user = authenticate($_POST['username'], $_POST['password']);

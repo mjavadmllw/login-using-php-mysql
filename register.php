@@ -1,6 +1,6 @@
 <?php
     include __DIR__ . "/component/loggedin.php";
-    include "dbCommunication.php";
+    include "functions.php";
 
     if(isset($_POST['submit'])){
         if(!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['email'])){
