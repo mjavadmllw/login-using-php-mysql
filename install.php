@@ -16,7 +16,7 @@
                         password varchar(50) NOT NULL,
                         email varchar(50) NOT NULL)";
             $conn->exec($sql);
-            registration($_POST['username'],$_POST['password'],$_POST['email']);
+            registrer($_POST['username'],$_POST['password'],$_POST['email']);
             echo "<h3 style='text-align: center;padding-top:50px;'>DB:$dbname & TABLE:users => created successfully</h3>";
             
             unlink("install.php");

@@ -1,6 +1,6 @@
 <?php
 
-    function registration($username,$password,$email){
+    function registrer($username,$password,$email){
         $username=htmlspecialchars($username);
         $password=htmlspecialchars($password);
         $email=htmlspecialchars($email);

@@ -12,7 +12,7 @@
                 } else if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
                     $error="please enter a valid email";
                 }else{
-                    registration($_POST['username'],$_POST['password'],$_POST['email']);
+                    registrer($_POST['username'],$_POST['password'],$_POST['email']);
                     header("location: login.php");
                 }
             }
